@@ -1,0 +1,21 @@
+.category-card img {
+    width: auto;
+    height: 300px; /* Adjust the height as needed */
+    object-position: center;
+    object-fit: cover;
+    border-radius: 10px !important;
+  }
+  
+  .category-card {
+    transition: box-shadow 0.5s; /* Apply transition to the box-shadow property */
+    border: 1px solid #e0e0e0;
+    border-radius: 10px !important;
+  }
+  
+  .category-card:hover {
+    box-shadow: 0 0 20px rgba(22, 115, 71, 0.5);
+  }
+
+    .category-card h4 {
+        font-size: 28px;
+    }
