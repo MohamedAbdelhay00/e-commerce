@@ -9,7 +9,7 @@ export default function GetSingleBrand({ id }) {
       let req = await axios.get(
         `https://ecommerce.routemisr.com/api/v1/brands/${id}`
       );
-      console.log(req.data.data);
+      // console.log(req.data.data);
       setBrand(req.data.data);
     } catch (error) {
       console.log(error);

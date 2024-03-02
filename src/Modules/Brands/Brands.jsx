@@ -21,7 +21,7 @@ export default function Categories() {
       let req = await axios.get(
         "https://ecommerce.routemisr.com/api/v1/brands"
       );
-      console.log(req.data.data);
+      // console.log(req.data.data);
       setBrands(req.data.data);
     } catch (error) {
       console.log(error);

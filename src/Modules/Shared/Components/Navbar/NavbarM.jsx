@@ -22,7 +22,7 @@ export default function NavbarM({ userData }) {
   const getCart = async () => {
     try {
       const req = await getCartItems();
-      console.log(req.data);
+      // console.log(req.data);
       // setNoOfCartItems(req.data.numOfCartItems);
     } catch (error) {
       console.log(error);

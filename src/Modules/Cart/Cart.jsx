@@ -19,12 +19,11 @@ export default function Cart() {
   } = useContext(CartContext);
 
   let token = localStorage.getItem("userToken");
-
-  console.log(token);
+  
   const getCart = async () => {
     try {
       let req = await getCartItems();
-      console.log(req?.data?.data);
+      // console.log(req?.data?.data);
       setNoOfItems(req?.data);
       setCartDetails(req?.data?.data);
       setCart(req?.data?.data?.products);

@@ -19,7 +19,7 @@ export default function Products() {
       const res = await axios.get(
         "https://ecommerce.routemisr.com/api/v1/products"
       );
-      console.log(res.data.data);
+      // console.log(res.data.data);
       setProducts(res.data.data);
     } catch (error) {
       console.log(error);

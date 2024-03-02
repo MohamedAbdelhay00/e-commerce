@@ -13,7 +13,7 @@ export default function Categories() {
       let req = await axios.get(
         "https://ecommerce.routemisr.com/api/v1/categories"
       );
-      console.log(req.data.data);
+      // console.log(req.data.data);
       setCategories(req.data.data);
     } catch (error) {
       console.log(error);
@@ -25,7 +25,7 @@ export default function Categories() {
       let req = await axios.get(
         `https://route-ecommerce.onrender.com/api/v1/categories/${id}/subcategories`
       );
-      console.log(req.data.data);
+      // console.log(req.data.data);
       setSubCategories(req.data.data);
     } catch (error) {
       console.log(error);

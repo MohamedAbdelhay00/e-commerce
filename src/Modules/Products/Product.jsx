@@ -18,7 +18,7 @@ export default function Product() {
       let req = await axios.get(
         `https://ecommerce.routemisr.com/api/v1/products/${id}`
       );
-      console.log(req.data.data);
+      // console.log(req.data.data);
       setProduct(req.data.data);
     } catch (error) {
       console.log(error);

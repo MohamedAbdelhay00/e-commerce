@@ -47,7 +47,7 @@ export default function WishList() {
           },
         }
       );
-      console.log(req.data.data);
+      // console.log(req.data.data);
       setWishList(req.data.data);
     } catch (error) {
       console.log(error.response.data.message);
