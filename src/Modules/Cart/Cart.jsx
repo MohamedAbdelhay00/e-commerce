@@ -39,21 +39,6 @@ export default function Cart() {
     }
   };
 
-  // const getCart = async () => {
-  //   try {
-  //     let req = await getCartItems();
-  //     console.log(req.data.data);
-  //     setNoOfItems(req.data)
-  //     setCartDetails(req.data.data);
-  //     setCart(req.data.data.products);
-  //   } catch (error) {
-  //     console.log(error);
-  //     if (error.response.data.statusMsg == 'fail') {
-  //       setCart(null);
-  //     }
-  //   }
-  // };
-
   const removeCartF = async (id) => {
     try {
       let req = await removeCart(id);
@@ -100,8 +85,6 @@ export default function Cart() {
       let req = await removeAllCartItems();
       if (req.status === 200) {
         setCart(null);
-
-        // Update the number of items in the cart to 0
         setNumOfCartItems(0);
       }
       console.log(req);
@@ -114,27 +97,9 @@ export default function Cart() {
     }
   };
 
-  // const removeAllCartItemsF = async () => {
-  //   try {
-  //     let req = await removeAllCartItems();
-  //     if (req.status === 200) {
-  //       setCart(null);
-  //     }
-  //     console.log(req);
-  //     setTimeout(() => {
-  //       toast.success(req.data.message, { position: "bottom-left" });
-  //     }, 100);
-  //   } catch (error) {
-  //     console.log(error.response.data.message);
-  //     toast.error(error.response.data.message, { position: "bottom-left" });
-  //   }
-  // };
-
   useEffect(() => {
     getCart();
   }, []);
-
-  // console.log(cart.length);
 
   return (
     <div className="wish-list container">
@@ -175,7 +140,7 @@ export default function Cart() {
             </div>
           </div>
           {cart?.map((cart) => (
-            <div className="row mb-5 pb-5 bordStyle" key={cart?._id}>
+            <div className="row gy-3 mb-5 pb-5 bordStyle" key={cart?._id}>
               <div className="col-md-2">
                 <img
                   src={cart?.product.imageCover}
@@ -196,7 +161,7 @@ export default function Cart() {
                     <i className="fa-solid fa-trash"></i> Remove
                   </button>
                 </div>
-                <div>
+                <div className="d-flex justify-content-center align-items-center">
                   <button
                     onClick={() => {
                       increaseCount(cart?.product._id, cart?.count);

@@ -72,45 +72,13 @@ export default function Product() {
     }
   };
 
-  // const addCart = async (id, event) => {
-  //   event.stopPropagation();
-  //   try {
-  //     let req = await addToCart(id);
-  //     console.log(req);
-  //     setNumOfCartItems(req.data.numOfCartItems);
-  //     setTimeout(() => {
-  //       toast.success(req.data.message, { position: "bottom-left" });
-  //     }, 100);
-  //   } catch (error) {
-  //     console.log(error);
-  //     toast.error(error.response.data.message, { position: "bottom-left" });
-  //   }
-  // };
-
-  // const addWishList = async (id, event) => {
-  //   event.stopPropagation();
-  //   try {
-  //     let req = await addToWishList(id);
-  //     console.log(req);
-  //     event.target.classList.replace("fa-regular", "fa-solid");
-  //     event.target.classList.replace("text-black", "text-danger");
-  //     setTimeout(() => {
-  //       toast.success(req.data.message, { position: "bottom-left" });
-  //     }, 100);
-
-  //   } catch (error) {
-  //     console.log(error);
-  //     toast.error(error.response.data.message, { position: "bottom-left" });
-  //   }
-  // };
-
   useEffect(() => {
     getProduct();
   }, []);
 
   return (
     <div className="product container py-5">
-      <div className="row justify-content-center align-items-center w-100">
+      <div className="row gy-3 justify-content-center align-items-center w-100">
         <div className="col-md-4">
         <ToastContainer></ToastContainer>
           <Carousel

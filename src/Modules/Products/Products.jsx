@@ -64,21 +64,6 @@ export default function Products() {
     }
   };
 
-  // const addCart = async (id, event) => {
-  //   event.stopPropagation();
-  //   try {
-  //     let req = await addToCart(id);
-  //     console.log(req);
-  //     setNumOfCartItems(req.data.numOfCartItems);
-  //     setTimeout(() => {
-  //       toast.success(req.data.message, { position: "bottom-left" });
-  //     }, 100);
-  //   } catch (error) {
-  //     console.log(error);
-  //     toast.error(error.response.data.message, { position: "bottom-left" });
-  //   }
-  // };
-
   const getSpicialProduct = (id) => {
     navigvate(`product/${id}`);
   };
@@ -86,8 +71,7 @@ export default function Products() {
   useEffect(() => {
     getProducts();
   }, []);
-
-  // Filter products based on search query
+  
   const filteredProducts = products.filter((product) =>
     product.title.toLowerCase().includes(searchQuery.toLowerCase())
   );
@@ -96,7 +80,7 @@ export default function Products() {
     <>
       <div className="container p-5">
         <ToastContainer></ToastContainer>
-        <div className="search-field w-100 d-flex justify-content-center m-5">
+        <div className="search-field w-100 d-flex justify-content-center my-5">
           <input
             type="text"
             placeholder="Search by product title"

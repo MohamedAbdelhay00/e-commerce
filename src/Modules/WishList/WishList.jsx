@@ -8,8 +8,6 @@ import { toast } from "react-toastify";
 export default function WishList() {
   let [wishList, setWishList] = useState([]);
 
-  const [loaded, setLoaded] = useState(false);
-
   let token = localStorage.getItem("userToken");
 
   let {addToCart, setNumOfCartItems} = useContext(CartContext);
@@ -79,7 +77,7 @@ export default function WishList() {
       <div className="inner-wish-list p-5 m-5 bg-body-tertiary rounded">
         <h2 className="pb-4">My wish List</h2>
         {wishList.map((wish) => (
-          <div className="row mb-5 pb-5 bordStyle" key={wish.id}>
+          <div className="row gy-3 mb-5 pb-5 bordStyle" key={wish.id}>
             <div className="col-md-2">
               <img src={wish.imageCover} alt={wish.title} className="w-100" />
             </div>
